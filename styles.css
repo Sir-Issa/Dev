@@ -41,4 +41,6 @@ body {
     color: #00aaff;
     font-weight: bold;
   }
-  
+    html {
+        scroll-behavior:smooth;
+            )
