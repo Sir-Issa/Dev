@@ -7,10 +7,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <section id="home" class="container">
     <h1>Welcome! <span class="emoji"></span></h1>
     <p class="intro"> Dev <span class="highlight">Sir Issa</span>,</p>
     <p class="intro">A developer who insipres to be someone known.</p>
-  </div>
+  </section>
+
+  <section id="about" class="container">
+    <h1>About Me</h1>
+    <p>This section is about Sir Issa.</p>
+  </section>
+
+  <section id="projects" class="container">
+    <h1>Projects</h1>
+    <p>This section will showcase projects.</p>
+  </section>
+
+  <script>
+    let ticking = false;
+    window.addEventListener('wheel', function(e) {
+      if (!ticking) {
+        ticking = true;
+        const direction = e.deltaY > 0 ? 'down' : 'up';
+        const sections = document.querySelectorAll('.container');
+        const current = Array.from(sections).findIndex(s => {
+          return Math.round(s.getBoundingClientRect().top) === 0;
+        });
+        const next = direction === 'down' 
+          ? Math.min(current + 1, sections.length - 1)
+          : Math.max(current - 1, 0);
+        sections[next].scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => ticking = false, 800);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,46 +1,44 @@
-/* styles.css */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #000;
-    background-image: url('6ed83d3f-6c2a-49ce-aa5d-fd7bd9fd5895.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    backdrop-filter: blur(4px);
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .emoji {
-    font-size: 2.5rem;
-    vertical-align: middle;
-  }
-  
-  .intro {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  
-  .highlight {
-    color: #00aaff;
-    font-weight: bold;
-  }
-    html {
-        scroll-behavior:smooth;
-            )
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url(background.png) no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 2rem;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.25rem;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 2rem;
+}
