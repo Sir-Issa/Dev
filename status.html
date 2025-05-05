@@ -136,7 +136,7 @@
     }
 
     function checkStatus() {
-      fetch("https://api.mcsrvstat.us/2/mc.sirissa.dev")
+      fetch("https://mcsrvstat.us/server/5.36.93.35:25565")
         .then(res => res.json())
         .then(data => {
           if (data.online) {
